@@ -239,7 +239,7 @@ void Gameplay::winner(std::array <std::array<Player, 3>, 3>& players, Gameplay &
 
 int main() {
 
-	sf::RenderWindow window(sf::VideoMode(800.f, 800.f), "e", sf::Style::Close);
+	sf::RenderWindow window(sf::VideoMode(800.f, 800.f), "tic tac toe", sf::Style::Close);
 	Gameplay game;
 
 	Player player('o');
