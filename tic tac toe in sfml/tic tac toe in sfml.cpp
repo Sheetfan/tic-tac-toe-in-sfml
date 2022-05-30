@@ -18,7 +18,7 @@ public:
 		sf::RectangleShape(sf::Vector2f(800.f,5.f)),
 	};
 
-	//create the grid
+	//create the grid and each RectangleShape object will repcent a block in the grid
 	std::array <std::array<sf::RectangleShape, 3>, 3> blocks = { {
 		{
 			sf::RectangleShape(sf::Vector2f(266.6666f - 5.f,266.6666f - 5.f)),
@@ -39,6 +39,7 @@ public:
 		}
 	}
 	};
+
 
 	sf::RectangleShape winningLine;
 
@@ -80,6 +81,7 @@ public:
 	//stores the shape o or x
 	sf::Font font;
 	std::string fileName = "font/Roboto-Medium.ttf";
+
 	Player() {
 		//set the Font, Origin point and displays the shape
 		if (font.loadFromFile(fileName)) {
@@ -167,9 +169,7 @@ int winConditions(std::array <std::array<Player, 3>, 3>& players, char shape) {
 			choice = i + 3;
 		}
 		
-	
 	}
-	
 
 	/*
 	  O
@@ -243,9 +243,10 @@ int main() {
 	Gameplay game;
 
 	Player player('o');
+	
+	//represents the positions of the players in the grid
 	std::array <std::array<Player, 3>, 3> players;
 
-	window.setFramerateLimit(60);
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {
