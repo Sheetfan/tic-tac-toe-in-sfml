@@ -266,7 +266,7 @@ void Gameplay::winner(std::array <std::array<Player, 3>, 3>& players, Gameplay &
 			gameOver(player);
 			break;
 		case 5:
-			game.winningLine.setPosition(sf::Vector2f(game.blocks[0][1].getPosition().x + middleBlock.x, game.blocks[0][1].getPosition().y + middleBlock.y / 2.f));
+			game.winningLine.setPosition(sf::Vector2f(game.blocks[0][2].getPosition().x + middleBlock.x, game.blocks[0][1].getPosition().y + middleBlock.y / 2.f));
 			game.winningLine.setSize(sf::Vector2f(5.f, game.blocks[2][2].getPosition().y + middleBlock.y));
 			game.winningLine.setFillColor(sf::Color::White);
 			gameOver(player);
